@@ -7,7 +7,10 @@ import java.util.Stack;
 /**
  * @DFS BFS : 탐색 알고리즘
  **/
+
 /**
+ * 01. 음료수 얼려먹기
+ * 02.
  * 1. 특정 거리의 도시 찾기 (핵심 유형)
  * 2. 연구소 (삼성)
  * 3. 경쟁적 전염 (핵심 유형)
@@ -84,8 +87,8 @@ public class DfsBfs {
         // 다른노드: graph3.get(x).get(i)
         for (int i = 0; i < graph3.get(x).size(); i++) {
 
-            int y = graph3.get(x).get(i);
-            if (!visited[y])
+            int y = graph3.get(x).get(i);   // 연결된 노드의 값
+            if (!visited[y])    // 방문한적이 없으
                 dfs(y);
         }
 
@@ -165,21 +168,6 @@ public class DfsBfs {
         graph4.get(8).add(7);
 
         bfs(1);
-    }
-
-
-    /**
-     * 음료수 얼려 먹기
-     */
-    public static void dfs_bfs_1(String[] args) {
-
-    }
-
-    /**
-     * 미로 탈출
-     */
-    public static void dfs_bfs_2(String[] args) {
-
     }
 
 
@@ -307,23 +295,23 @@ public class DfsBfs {
      * 인접 리스트
      */
     // 행(Row)이 3개인 인접 리스트 표현
-    public static ArrayList<ArrayList<Node>> graph2 = new ArrayList<ArrayList<Node>>();
+    public static ArrayList<ArrayList<DNode>> graph2 = new ArrayList<ArrayList<DNode>>();
 
     public static void main(String[] args) {
         // 그래프 초기화
         for (int i = 0; i < 3; i++) {
-            graph2.add(new ArrayList<Node>());
+            graph2.add(new ArrayList<DNode>());
         }
 
         // 노드 0에 연결된 노드 정보 저장 (노드, 거리)
-        graph2.get(0).add(new Node(1, 7));
-        graph2.get(0).add(new Node(2, 5));
+        graph2.get(0).add(new DNode(1, 7));
+        graph2.get(0).add(new DNode(2, 5));
 
         // 노드 1에 연결된 노드 정보 저장 (노드, 거리)
-        graph2.get(1).add(new Node(0, 7));
+        graph2.get(1).add(new DNode(0, 7));
 
         // 노드 2에 연결된 노드 정보 저장 (노드, 거리)
-        graph2.get(2).add(new Node(0, 5));
+        graph2.get(2).add(new DNode(0, 5));
 
         // 그래프 출력
         for (int i = 0; i < 3; i++) {
@@ -334,4 +322,19 @@ public class DfsBfs {
         }
     }
 }
+// fro 인접 리스트
+class DNode {
 
+    private int index;
+    private int distance;
+
+    public DNode(int index, int distance) {
+        this.index = index;
+        this.distance = distance;
+    }
+
+    public void show() {
+        System.out.print("(" + this.index + "," + this.distance + ") ");
+    }
+
+}

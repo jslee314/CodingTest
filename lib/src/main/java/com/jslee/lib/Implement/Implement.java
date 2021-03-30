@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * @구현(implement) : 아이디어를 코드로 바꾸는 구현
  **/
+
 /**
  * 1. 럭키 스트레이트 (핵심 유형): (Python 3.7 코드 / C++ 코드 / Java 코드)
  * 2. 문자열 재정렬 (Facebook 인터뷰 기출): (Python 3.7 코드 / C++ 코드 / Java 코드)
