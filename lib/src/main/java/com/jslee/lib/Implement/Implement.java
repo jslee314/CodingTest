@@ -7,19 +7,19 @@ import java.util.Scanner;
  **/
 
 /**
- * 1. 럭키 스트레이트 (핵심 유형): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 2. 문자열 재정렬 (Facebook 인터뷰 기출): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 3. 문자열 압축 (카카오): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 4. 자물쇠와 열쇠 (카카오): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 5. 뱀 (삼성): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 6. 기둥과 보 설치 (카카오): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 7. 치킨 배달 (삼성): (Python 3.7 코드 / C++ 코드 / Java 코드)
- * 8. 외벽 점검 (카카오): (Python 3.7 코드 / C++ 코드 / Java 코드)
+ * 1. 럭키 스트레이트 (핵심 유형)
+ * 2. 문자열 재정렬 (Facebook 인터뷰 기출)
+ * 3. 문자열 압축 (카카오)
+ * 4. 자물쇠와 열쇠 (카카오)
+ * 5. 뱀 (삼성)
+ * 6. 기둥과 보 설치 (카카오)
+ * 7. 치킨 배달 (삼성)
+ * 8. 외벽 점검 (카카오)
  */
 public class Implement {
 
     // -------------------------------------------------------------------------------------------
-    // 1. 상하좌우 :
+    // 1. 상하좌우
     public static void implement_1(String[] args){
         Scanner sc = new Scanner(System.in);
 
@@ -57,24 +57,25 @@ public class Implement {
 
 
     // -------------------------------------------------------------------------------------------
-    // 2. 시각 : 특정 시간안에 3이 몇번 포함되었나
+    /**
+     *
+     * 00시 00분 00초에서 n시 59분 59초에서 3이 하나라도 포함되어 있는 경우의 수
+     * *
+     * */
+
     public static void implement_2(String[] args){
-        Scanner sc = new Scanner(System.in);
-
-        // H를 입력받기
-        int h = sc.nextInt();
-        int cnt = 0;
-
-        for (int i = 0; i <= h; i++) {
-            for (int j = 0; j < 60; j++) {
-                for (int k = 0; k < 60; k++) {
-                    // 매 시각 안에 '3'이 포함되어 있다면 카운트 증가
-                    if (check(i, j, k)) cnt++;
+        int n =5;
+        int result =0;
+        for(int i=0; i<=n; i++){
+            for(int m=0; m<60; m++){
+                for(int s=0; s<60; s++){
+                    String txt = Integer.toString(i) + Integer.toString(m) + Integer.toString(s);
+                    if(txt.contains("3")) result++;
                 }
             }
         }
+        System.out.println(result);
 
-        System.out.println(cnt);
     }
 
     // 특정한 시각 안에 '3'이 포함되어 있는지의 여부

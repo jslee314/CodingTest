@@ -5,9 +5,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/**
+ ****************    특정 거리의 도시 찾기 (핵심)    ***************
+ * 어떤나라에는 1-n까지 도시와 m개의 단방향 도로가 존재합니다.
+ * 이때 특정한 도시 x로 부터 출발하여 도달할수 있는 모든 도시 중,
+ * "최단거리가 정확히 k"인 모든 도시의 번호를 출력하는 프로그램을 작성하세요.
+ *
+ * - 모든 도로의 거리는 1
+ * - 출발도시 x에서 출발 도시 x로 가는 최단 거리는 항상 0
+ *
+ * 입력
+ */
 public class Test01 {
 
-    // 도시의 개수, 도로의 개수, 거리 정보, 출발 도시 번호
+    // 도시 수(n), 도로 수(m), 목표 거리(k), 출발 도시 번호
     public static int n, m, k, x;
     public static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 

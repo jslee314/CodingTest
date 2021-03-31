@@ -1,7 +1,14 @@
 package com.jslee.lib.DfsBfs;
 
 import java.util.Scanner;
-
+/**
+ ****************    바이러스 연구소 (삼성)   ***************
+ * n(height) x m(width) 크기 연구소
+ * 빈칸(0), 벽(1), 바이러스(2) 이고, 벽을 세우지 않으면 바이러스는 상하좌우로 빈칸으로 퍼질 수 있다.
+ * 3개의 벽을 세운 뒤, 안전영역 크기의 최대값 ?
+ *
+ * 
+ * */
 public class Test02 {
     public static int n, m, result = 0;
     public static int[][] arr = new int[8][8]; // 초기 맵 배열

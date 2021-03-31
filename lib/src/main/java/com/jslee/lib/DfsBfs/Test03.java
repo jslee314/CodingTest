@@ -5,10 +5,15 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-
 /**
- * 경쟁적 전염 (핵심유형)
- */
+ ****************    경쟁적 전염 (핵심)   ***************
+ * n x n 크기의 시험
+ * k 종류의 바이러스는 1초마다 각각 상하좌우로 번식한다
+ * 바이러스가 겹치면 작은 숫자가 우선한다
+ *
+ * s초 후 (x, y) 위에 존재하는 바이러스 종류는?
+ *
+ * */
 class Virus implements Comparable<Virus> {
 
     private int index;
